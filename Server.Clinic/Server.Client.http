@@ -1,0 +1,6 @@
+@Server.Clinic_HostAddress = http://localhost:5089
+
+GET {{Server.Client_HostAddress}}/health/
+Accept: application/json
+
+###

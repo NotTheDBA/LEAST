@@ -1,0 +1,6 @@
+@Server.Study_HostAddress = http://localhost:5052
+
+GET {{Server.Study_HostAddress}}/health/
+Accept: application/json
+
+###
