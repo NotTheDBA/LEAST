@@ -1,0 +1,25 @@
+<Project>
+<PropertyGroup>
+    <Company>Company</Company><!-- Edit company name at creation-->
+    <Authors>Author(s)</Authors><!-- Edit author name(s) for releases-->
+    <Version>0.0.1</Version> <!-- Edit SemVer for releases-->
+    <Product>$(SolutionName)</Product>
+    <Copyright>© Copyright $([System.DateTime]::Now.Year)</Copyright>
+    <NeutralLanguage>en</NeutralLanguage> 
+    <RootNamespace>$(SolutionName.Replace(" ", "_")).$(MSBuildProjectName.Replace(" ", "_"))</RootNamespace>
+	<AssemblyName>$(SolutionName).$(MSBuildProjectName)</AssemblyName>
+</PropertyGroup>
+<!-- NuGet -->
+<PropertyGroup>
+    <NuGetAudit>true</NuGetAudit>
+    <NuGetAuditLevel>low</NuGetAuditLevel>
+    <NuGetAuditMode>all</NuGetAuditMode>
+</PropertyGroup>
+<PropertyGroup>
+    <AccelerateBuildsInVisualStudio>true</AccelerateBuildsInVisualStudio>
+</PropertyGroup>
+<ItemGroup>
+    <Using Include="System.Text.Json" />
+    <Using Remove="Newtonsoft.Json" />
+</ItemGroup>
+</Project>
