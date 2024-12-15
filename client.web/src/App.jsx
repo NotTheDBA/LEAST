@@ -2,10 +2,10 @@ import { useEffect, useState } from 'react';
 import './App.css';
 
 function App() {
-    const [healthChecks] = useState();
+    const [healthChecks, setHealthChecks] = useState();
 
     useEffect(() => {
-        populateWeatherData();
+        populateHealthData();
     }, []);
 
     const contents = healthChecks === undefined
@@ -37,11 +37,11 @@ function App() {
         </div>
     );
     
-    async function populateWeatherData() {
+    async function populateHealthData() {
         const response = await fetch('health');
         if (response.ok) {
             const data = await response.json();
-            sethealthchecks(data);
+            setHealthChecks(data);
         }
     }
 }
