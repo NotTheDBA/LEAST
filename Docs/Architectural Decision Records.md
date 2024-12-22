@@ -2,6 +2,7 @@
 - https://adr.github.io/
 
 ## Tech Stack
+The project is initialized with the "React and ASP.NET Core" template from Visual Studio 2022 targeting .NET 8.
 React and Asp.NET Core project template
 - .NET 8 C# [API]
 - React v ? [client]
