@@ -5,6 +5,10 @@
     text-align: center;
 }
 
+.content_area{
+    @apply bg-white w-content min-h-screen;
+}
+
 th, td {
     padding-left: 1rem;
     padding-right: 1rem;
