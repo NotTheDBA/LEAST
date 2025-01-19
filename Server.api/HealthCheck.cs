@@ -1,4 +1,4 @@
-namespace Server.Clinic;
+namespace LEAST.Server.api;
 
 public class HealthCheck
 {
