@@ -1,4 +1,4 @@
-namespace Server.api
+namespace LEAST.Server.api
 {
     public class WeatherForecast
     {

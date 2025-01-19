@@ -1,0 +1,19 @@
+<Project>
+<PropertyGroup>
+    <Company>AndAlso</Company>
+    <Authors>R. S. Reitz</Authors>
+    <Product>$(SolutionName)</Product>
+    <Version>0.0.1</Version>
+    <Copyright>© Copyright $([System.DateTime]::Now.Year)</Copyright>
+    <NeutralLanguage>en</NeutralLanguage> 
+    <RootNamespace>$(SolutionName.Replace(" ", "_")).$(MSBuildProjectName.Replace(" ", "_"))</RootNamespace>
+	<AssemblyName>$(SolutionName).$(MSBuildProjectName)</AssemblyName>
+</PropertyGroup>
+<PropertyGroup>
+    <AccelerateBuildsInVisualStudio>true</AccelerateBuildsInVisualStudio>
+</PropertyGroup>
+<ItemGroup>
+    <Using Include="System.Text.Json" />
+    <Using Remove="Newtonsoft.Json" />
+</ItemGroup>
+</Project>
