@@ -12,7 +12,7 @@ insert_final_newline = false
 end_of_line = crlf
 
 # Rules for C# in this file were initially inferred by Visual Studio IntelliCode from existing project work.
-# The latest version is based on best match to current usage as of 2025.01.19
+# The latest version is based on best match to current usage as of 2025.01.25
 # You can modify the rules from these initially generated values to suit your own policies
 # You can learn more about editorconfig here: https://docs.microsoft.com/en-us/visualstudio/ide/editorconfig-code-style-settings-reference
 [*.cs]
@@ -28,10 +28,14 @@ dotnet_diagnostic.S927.severity = suggestion
 #Formatting - global features
 csharp_style_namespace_declarations = file_scoped:warning
 
+#Formatting - indentation options
+
 #indent switch case contents.
 csharp_indent_case_contents = true
 #indent switch labels
 csharp_indent_switch_labels = true
+
+#Formatting - new line options
 
 #place catch statements on a new line
 csharp_new_line_before_catch = true
@@ -42,10 +46,14 @@ csharp_new_line_before_members_in_object_initializers = true
 #require braces to be on a new line for control_blocks, object_collection_array_initializers, lambdas, types, and methods (also known as "Allman" style)
 csharp_new_line_before_open_brace = control_blocks, object_collection_array_initializers, lambdas, types, methods
 
-#Formatting - organize using options
+#Formatting - organize using directive options
 
 #do not place System.* using directives before other using directives
+csharp_using_directive_placement = outside_namespace:silent
+csharp_prefer_simple_using_statement = true:suggestion
 dotnet_sort_system_directives_first = false
+#remove unnecessary using directives
+dotnet_diagnostic.IDE0005.severity = warning
 
 #Formatting - spacing options
 
@@ -129,8 +137,6 @@ dotnet_style_qualification_for_method = false:suggestion
 #prefer properties not to be prefaced with this. or Me. in Visual Basic
 dotnet_style_qualification_for_property = false:suggestion
 csharp_indent_labels = one_less_than_current
-csharp_using_directive_placement = outside_namespace:silent
-csharp_prefer_simple_using_statement = true:suggestion
 csharp_style_prefer_method_group_conversion = true:silent
 csharp_style_prefer_top_level_statements = true:silent
 csharp_style_prefer_primary_constructors = true:suggestion
